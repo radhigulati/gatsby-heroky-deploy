@@ -4,4 +4,7 @@ orbs:
 workflows:
   heroku_deploy:
     jobs:
+      - run:
+          name: Gatsby Build
+          command: npm run build
       - heroku/deploy-via-git
